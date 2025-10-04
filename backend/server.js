@@ -12,8 +12,8 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://your-domain.vercel.app', 'https://your-custom-domain.com']
-    : ['http://localhost:3000', 'http://127.0.0.1:3000', 'http://127.0.0.1:5500'],
+    ? ['https://your-domain.vercel.app', 'https://my-cricket-reg-app-zyg2.vercel.app']
+    : ['http://localhost:3000', 'http://127.0.0.1:3000', 'http://127.0.0.1:5500','https://my-cricket-reg-app-zyg2.vercel.app'],
   credentials: true
 }));
 
