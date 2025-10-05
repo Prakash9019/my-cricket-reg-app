@@ -40,7 +40,7 @@ app.use((req, res, next) => {
 });
 
 // MongoDB connection
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://plsprakash2003:Surya_2003@cluster0.2yh1df7.mongodb.net/pro?retryWrites=true&w=majority&ssl=true';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://plsprakash2003:Surya_2003@cluster0.2yh1df7.mongodb.net/idcs?retryWrites=true&w=majority&ssl=true';
 
 mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
