@@ -293,6 +293,9 @@ body {
 }
 
 
+
+
+
 /* Success Page Styles */
 .success-container {
     position: fixed;
@@ -1316,7 +1319,7 @@ select:focus-visible {
 .detail-card:nth-child(5) { animation-delay: 0.5s; }
 .detail-card:nth-child(6) { animation-delay: 0.6s; }
 
-
+/* 
 .success-container {
   background: #f0fdfa;
   padding: 2rem;
@@ -1357,7 +1360,7 @@ select:focus-visible {
   text-align: center;
   color: #475569;
   margin-top: 0.5rem;
-}
+} */
 
 .info-card {
   display: flex;
