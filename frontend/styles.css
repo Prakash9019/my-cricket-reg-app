@@ -309,7 +309,7 @@ body {
 }
 
 .success-content {
-    max-width: 48rem;
+   margin: 0;
     width: 100%;
 }
 

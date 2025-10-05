@@ -12,8 +12,8 @@ class PlayerRegistration {
         this.errorContainer = document.getElementById('errorContainer');
         this.submitBtn = document.getElementById('submitBtn');
         
-        // API configuration
-        this.apiBaseUrl = 'http://localhost:3000';
+        // API configuration https://my-cricket-reg-app.vercel.app
+        this.apiBaseUrl = 'https://my-cricket-reg-app.vercel.app';
         
         // Registration data storage
         this.registrationData = null;
