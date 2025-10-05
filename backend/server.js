@@ -367,7 +367,7 @@ async function generateUniquePlayerId() {
     const seqStr = String(sequenceNumber).padStart(2, '0');
 
     // Create Player ID: idsc + sequence + ddmmyyyy
-    const playerId = `idsc${seqStr}${dateStr}`;
+    const playerId = `idsc${seqStr}${dateStr}`.toUpperCase();
 
     console.log(`🆔 Generated Player ID: ${playerId} (Sequence: ${sequenceNumber}, Date: ${dateStr})`);
 
@@ -464,11 +464,13 @@ app.get('/api/sequence', async (req, res) => {
     res.json({
       success: true,
       currentSequence,
-      nextPlayerId: `idsc${String(currentSequence + 1).padStart(2, '0')}${new Date().toLocaleDateString('en-GB', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric'
-      }).replace(/\//g, '')}`
+     nextPlayerId: (
+    `idsc${String(currentSequence + 1).padStart(2, '0')}${new Date().toLocaleDateString('en-GB', {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric'
+    }).replace(/\//g, '')}`
+  ).toUpperCase()
     });
   } catch (error) {
     res.status(500).json({
@@ -509,7 +511,7 @@ app.post('/api/players/register', async (req, res) => {
 
     console.log('📝 Registration request received for:', firstName, lastName);
 
-    // Validate required fields
+    // Validate required fields  .toUpperCase()
     const requiredFields = {
       firstName, lastName, dateOfBirth, gender, email, phone,
       streetAddress, city, state, postalCode, role,
