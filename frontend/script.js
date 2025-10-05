@@ -267,7 +267,7 @@ class PlayerRegistration {
             
             if (data.success && data.nextPlayerId) {
                 console.log('📋 Next Player ID:', data.nextPlayerId);
-                this.displayNextPlayerIdPreview(data.nextPlayerId);
+                // this.displayNextPlayerIdPreview(data.nextPlayerId);
             }
         } catch (error) {
             console.warn('⚠️ Could not fetch next Player ID preview:', error.message);
