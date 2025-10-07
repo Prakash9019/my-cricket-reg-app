@@ -529,20 +529,20 @@ app.post('/api/players/register', async (req, res) => {
     }
 
     // Validate unique fields
-    const validationErrors = await validateUniqueFields({
-      email,
-      username,
-      phone
-    });
+    // const validationErrors = await validateUniqueFields({
+    //   email,
+    //   username,
+    //   phone
+    // });
 
-    if (validationErrors.length > 0) {
-      console.log('❌ Validation errors:', validationErrors);
-      return res.status(400).json({
-        success: false,
-        message: 'Validation failed',
-        errors: validationErrors
-      });
-    }
+    // if (validationErrors.length > 0) {
+    //   console.log('❌ Validation errors:', validationErrors);
+    //   return res.status(400).json({
+    //     success: false,
+    //     message: 'Validation failed',
+    //     errors: validationErrors
+    //   });
+    // }
 
     // Generate unique IDs with NEW LOGIC
     const { playerId, sequenceNumber } = await generateUniquePlayerId();
