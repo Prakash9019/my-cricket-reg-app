@@ -79,7 +79,7 @@ const playerSchema = new mongoose.Schema({
   },
   userId: {
     type: String,
-    unique: true,
+    // unique: true,
     required: true,
     index: true
   },
@@ -131,7 +131,7 @@ const playerSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
-    unique: true,
+    // unique: true,
     lowercase: true,
     trim: true,
     index: true,
@@ -145,7 +145,7 @@ const playerSchema = new mongoose.Schema({
   phone: {
     type: String,
     required: true,
-    unique: true,
+    // unique: true,
     trim: true,
     index: true,
     validate: {
@@ -199,13 +199,13 @@ const playerSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    required: true,
+    // required: true,
     enum: ['Batsman', 'Bowler', 'All Rounder', 'Keeper Batsman'],
     index: true
   },
   battingOrderPreference: {
     type: String,
-    required: true,
+    // required: true,
     enum: ['Opening', 'Top Order', 'Middle Order', 'Lower Order']
   },
   bowlingStyle: {
@@ -215,7 +215,7 @@ const playerSchema = new mongoose.Schema({
   },
   battingStyle: {
     type: String,
-    required: true,
+    // required: true,
     enum: ['Right Handed Bat', 'Left Handed Bat']
   },
   bowlingArm: {
@@ -227,7 +227,7 @@ const playerSchema = new mongoose.Schema({
   username: {
     type: String,
     required: true,
-    unique: true,
+    // unique: true,
     trim: true,
     minlength: 3,
     maxlength: 30,
